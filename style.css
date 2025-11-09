@@ -1,0 +1,140 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  overflow: hidden;
+}
+
+/* ===== MENU ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  z-index: 20;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #d0d0d0;
+}
+
+/* ===== IMAGE DE FOND ===== */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  z-index: -1;
+}
+
+/* ===== SECTION BIENVENUE ===== */
+.welcome {
+  position: absolute;
+  top: 177px;
+  left: 50px;
+  color: white;
+}
+
+.welcome h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  width: 800px;
+}
+
+/* ===== BARRE DE RECHERCHE ===== */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background: rgba(181, 181, 181, 0.5);
+  border-radius: 36px;
+  height: 36px;
+  padding: 0 10px;
+}
+
+.search-container input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  width: 400px;
+}
+
+.search-container button {
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ===== SLIDER D’ESPÈCES ===== */
+.species-slider {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  color: #B5B5B5;
+}
+
+.active-species-name {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.species-circles {
+  display: flex;
+  gap: 25px;
+}
+
+.species-item {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: B5B5B5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.species-item.active {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
