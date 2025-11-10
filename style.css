@@ -30,6 +30,8 @@ body {
 .logo {
   font-size: 18px;
   font-weight: 600;
+  color: white;
+  text-decoration: none; /* enlève le soulignement */
 }
 
 .menu a {
@@ -70,7 +72,7 @@ body {
 .welcome h1 {
   font-size: 40px;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   width: 800px;
   color: white;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* ombre noire */
@@ -183,8 +185,8 @@ body {
 
 /* Chaque carte */
 .recents-card {
-  width: 400px;
-  height: 340px;
+  width: 360px;
+  height: 320px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 15px;
   backdrop-filter: blur(6px);

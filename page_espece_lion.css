@@ -1,0 +1,63 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+/* ===== MENU ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  z-index: 20;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none; /* enlève le soulignement */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #d0d0d0;
+}
+
+/* ===== IMAGE DE FOND ===== */
+.background {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  overflow: hidden;
+  z-index: -1;
+}
+
