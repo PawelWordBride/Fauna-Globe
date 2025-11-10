@@ -1,7 +1,7 @@
 const species = [
   { name: "Lion", image: "images/lion.jpg" },
-  { name: "Tigre", image: "images/lion.jpg" },
-  { name: "Aigle", image: "images/lion.jpg" },
+  { name: "Tigre", image: "images/tigre.jpg" },
+  { name: "Aigle", image: "images/aigle.jpg" },
   { name: "Girafe", image: "images/girafe.jpg" }
 ];
 

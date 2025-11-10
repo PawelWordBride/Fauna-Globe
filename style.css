@@ -8,6 +8,7 @@
 body {
   font-family: 'Playfair Display', serif;
   overflow: hidden;
+  background-color: black;
 }
 
 /* ===== MENU ===== */
@@ -45,30 +46,34 @@ body {
 
 /* ===== IMAGE DE FOND ===== */
 .background {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 650px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   transition: background-image 1s ease-in-out;
+  overflow: hidden;
   z-index: -1;
 }
 
 /* ===== SECTION BIENVENUE ===== */
 .welcome {
   position: absolute;
-  top: 177px;
+  top: 100px;
   left: 50px;
   color: white;
 }
 
 .welcome h1 {
-  font-size: 64px;
+  font-size: 40px;
   font-weight: 600;
   margin-bottom: 40px;
   width: 800px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* ombre noire */
 }
 
 /* ===== BARRE DE RECHERCHE ===== */
@@ -77,7 +82,7 @@ body {
   align-items: center;
   width: fit-content;
   background: rgba(181, 181, 181, 0.5);
-  border-radius: 36px;
+  border-radius: 15px;
   height: 36px;
   padding: 0 10px;
 }
@@ -88,7 +93,7 @@ body {
   color: white;
   font-size: 16px;
   outline: none;
-  width: 400px;
+  width: 330px;
 }
 
 .search-container button {
@@ -103,8 +108,8 @@ body {
 /* ===== SLIDER D’ESPÈCES ===== */
 .species-slider {
   position: absolute;
-  bottom: 40px;
-  right: 60px;
+  top: 550px;
+  right: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,7 +119,7 @@ body {
 
 .active-species-name {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 12px;
   transition: opacity 0.3s ease;
@@ -126,8 +131,8 @@ body {
 }
 
 .species-item {
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background-color: B5B5B5;
   cursor: pointer;
@@ -138,3 +143,82 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   transform: scale(1.2);
 }
+
+/* ===== SECTION RECENTS ===== */
+.recents {
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+}
+
+.recents h3 {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 22px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* ombre pour mieux ressortir */
+}
+
+.recents h3:hover {
+  background: rgba(255, 255, 255, 0.3); /* effet visuel au survol */
+  transform: scale(1.05);               /* légère mise en avant */
+}
+
+/* Conteneur des cartes */
+/* Conteneur des cartes */
+.recents-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* Chaque carte */
+.recents-card {
+  width: 400px;
+  height: 340px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden; /* pour que l'image ne dépasse pas les coins */
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.recents-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Image du haut */
+.card-image {
+  flex: 1; /* prend tout l'espace sauf le rectangle du nom */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+/* Rectangle du nom */
+.card-name {
+  height: 75px;
+  background: rgba(0, 0, 0, 0.5); /* fond semi-transparent */
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+
